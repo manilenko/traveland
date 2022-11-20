@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Ribeye&family=Roboto:wght@400;500&display=swap");
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.main-screen {
+  top: 0;
+  left: 0;
+  width: 1600px;
+  height: 900px;
+  background-image: url("../img/main-fon.png");
+}/*# sourceMappingURL=style.css.map */
