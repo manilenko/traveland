@@ -1,19 +1,203 @@
 @import url("https://fonts.googleapis.com/css2?family=Ribeye&family=Roboto:wght@400;500&display=swap");
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.button {
+  width: 187px;
+  height: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #C9453B;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 5px;
+  z-index: 10;
+}
+.button:hover {
+  background: #db5a50;
+}
+@media (max-width: 479px) {
+  .button {
+    width: 120px;
+    height: 43px;
+    font-size: 14px;
+  }
+}
+
 .wrapper {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
+.wrapper [class*=__container] {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
-.main {
-  flex: 1 1 auto;
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: #000;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 130px;
+}
+
+.header__buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.header__burger {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  z-index: 3;
+}
+.header__burger span {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 9px;
+}
+.header__burger::before, .header__burger::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.header__burger::before {
+  top: 0;
+}
+.header__burger::after {
+  bottom: 0;
+}
+.header__burger.active::before {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.header__burger.active::after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+.header__burger.active span {
+  transform: scale(0);
+}
+@media (min-width: 768px) {
+  .header__burger {
+    display: none;
+  }
+}
+
+.header__logo {
+  z-index: 10;
+}
+
+.logo__text {
+  font-family: "Ribeye";
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1d1c1c;
+    overflow: auto;
+    transition: all 0.3s ease 0s;
+  }
+  .header__menu.active {
+    top: 0;
+  }
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.menu__list .menu__link {
+  font-weight: 500;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.menu__list .menu__link:hover {
+  color: #dbdbdb;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .menu__list {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
 }
 
 .main-screen {
-  top: 0;
-  left: 0;
-  width: 1600px;
+  max-width: 1600px;
   height: 900px;
-  background-image: url("../img/main-fon.png");
+  padding: 286px 0 244px 0;
+  background: #000;
+}
+@media (max-width: 479px) {
+  .main-screen {
+    padding: 135px 0 100px 0;
+  }
+}
+
+.main-screen__title {
+  padding-bottom: 30px;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 120%;
+  font-family: "Ribeye";
+  max-width: 700px;
+  color: #FFFFFF;
+}
+@media (max-width: 479px) {
+  .main-screen__title {
+    font-size: 35px;
+  }
+}
+
+.main-screen__text {
+  max-width: 400px;
+  padding-bottom: 40px;
+  line-height: 160%;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+@media (max-width: 479px) {
+  .main-screen__text {
+    padding-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
