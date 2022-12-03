@@ -293,4 +293,81 @@ body {
   .content-location__body {
     border: none;
   }
+}
+
+.special-offers {
+  padding-bottom: 140px;
+}
+@media (max-width: 560px) {
+  .special-offers {
+    padding-bottom: 30px;
+  }
+}
+
+.blog-news {
+  padding-bottom: 140px;
+}
+@media (max-width: 786px) {
+  .blog-news {
+    padding-bottom: 74px;
+  }
+}
+@media (max-width: 560px) {
+  .blog-news {
+    padding-bottom: 30px;
+  }
+}
+
+.blog-news__row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .blog-news__row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.blog-news__img {
+  padding-bottom: 35px;
+  max-width: 554px;
+}
+.blog-news__img img {
+  width: 100%;
+}
+
+.body-blog-news__img {
+  padding-bottom: 30px;
+  max-width: 263px;
+}
+.body-blog-news__img img {
+  width: 100%;
+}
+
+.blog-news__title {
+  font-family: "Gelasio";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.blog-news__text {
+  max-width: 470px;
+  padding: 10px 0;
+  opacity: 0.6;
+  line-height: 160%;
+}
+
+.blog-news__author {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.body-blog-news__items {
+  display: flex;
+  gap: 27px;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
