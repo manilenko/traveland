@@ -191,9 +191,9 @@ body {
   background: url("../img/main-fon.png") no-repeat;
   background-position: center top;
 }
-@media (max-width: 479px) {
+@media (max-width: 668px) {
   .main-screen {
-    padding: 35px 0 30px 0;
+    padding: 110px 0 30px 0;
   }
 }
 
@@ -205,6 +205,11 @@ body {
   font-family: "Gelasio", serif;
   max-width: 700px;
   color: #FFFFFF;
+}
+@media (max-width: 668px) {
+  .main-screen__title {
+    font-size: 35px;
+  }
 }
 @media (max-width: 479px) {
   .main-screen__title {
@@ -228,7 +233,7 @@ body {
 .location {
   padding: 140px 0 170px 0;
 }
-@media (max-width: 560px) {
+@media (max-width: 668px) {
   .location {
     padding: 30px 0 40px 0;
   }
